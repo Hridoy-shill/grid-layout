@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* grid layout 3 */
+.layout3-container{
+    background-color: rgb(242, 242, 242);
+    height: 100vh;
+    gap: 10px;
+    display: grid;
+    font-size: 2.5rem;
+    grid-template-rows: 100px 400px 100px;
+    grid-template-areas: 
+    'h'
+    'a'
+    'f';
+    text-align: center;
+    margin: 20px;
+}
+header{
+    display: grid;
+    grid-area: h;
+    background-color: lightcoral;
+    height: 100%;
+    width: 100%;
+}
+main{
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 100%;
+    display: grid;
+
+}
+/* artical part */
+.sec1{grid-area: s1;}
+.sec2{grid-area: s2;}
+.sec3{grid-area: s3;}
+.side1{grid-area: sd1;}
+.side2{grid-area: sd2;}
+
+article{
+    display: grid;
+    grid-template-areas: 
+    's1 sd1'
+    's2 sd2'
+    's3 .';
+    gap: 10px;
+}
+section{
+    background-color: lightslategrey;
+}
+aside{
+    background-color: lightpink;
+}
+
+.fn1{grid-area: fn1;
+    background-color: lightgreen;
+}
+.fn2{grid-area: fn2;
+    background-color: lightgreen;
+}
+
+footer{grid-area: f;
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+    'fn1 fn2';
+    gap: 10px;
+}
+
+
+/* grid layout 2 */
+
+
+.item1{grid-area: header;}
+.item2{grid-area: nav;}
+.item3{grid-area: contant1;}
+.item4{grid-area: main;}
+.item5{grid-area: contant2;}
+.item6{grid-area: footer;}
+
+.layout2-container{
+    margin: 20px;
+    display: grid;
+    gap: 5px;
+    grid-template-areas: 
+    'header header header header header header'
+    'nav nav nav nav nav nav'
+    'contant1 main main main main contant2'
+    'footer footer footer footer footer footer';
+    grid-template-rows: 80px 80px 300px 100px;
+    max-width: 100%;
+    margin-bottom: 50px;
+}
+.layout2-container>div{
+    background-color: lightblue;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* layout 1 */
+.layout1-item1{grid-area: header;}
+.layout1-item2{grid-area: manu;}
+.layout1-item3{grid-area: main;}
+.layout1-item4{grid-area: aside;}
+.layout1-item5{grid-area: banner;}
+.layout1-item6{grid-area: footer;}
+
+.layout1-container{
+    margin: 20px;
+    max-width: 100%;
+    display: grid;
+    grid-template-areas: 
+    'header header header header header'
+    'manu main main aside aside'
+    'manu main main aside aside'
+    'manu banner banner banner banner'
+    'footer footer footer footer footer';
+    gap: 5px;
+    background-color: rgb(255, 255, 255);
+    grid-template-columns: 150px repeat(4, 1fr);
+    grid-template-rows: 120px 150px 0px 150px 120px; 
+}
+.layout1-container>div{
+    background-color: lightblue;
+    font-size: 2.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+/* layout 3 */
